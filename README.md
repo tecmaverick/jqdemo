@@ -16,6 +16,12 @@ cat youtube.json | jq ".kind"
 #outputs: "youtube#searchListResponse"
 ```
 
+3. Query a json file using absolute reference. Sample JSON: {"pageInfo": {"totalResults":4249"}}
+```
+cat youtube.json | jq ".pageInfo.totalResults"
+#outputs: "4249"
+```
+
 
 ## Arrays
 1. Get first element in an array. Sample JSON: [{"ID":"1"},{"ID":"2"}] 
