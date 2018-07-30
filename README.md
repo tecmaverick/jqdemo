@@ -27,7 +27,7 @@ cat json_array.json|jq ".[0]"
 cat json_array.json|jq ".[-1]"
 ```
 
-3. Get value of first name key in an array index. Sample JSON:{"markers":[{"name":"Alpha"},{"name":"Beta"}]}
+3. Get value of first name key in an array index. Sample JSON: {"markers":[{"name":"Alpha"},{"name":"Beta"}]}
 
 ```
 cat markers.json| jq ".markers[0] | .name"
@@ -37,7 +37,13 @@ cat markers.json| jq ".markers[0] | .name"
 cat markers.json| jq -r ".markers[0] | .name"
 ```
 
-
+4. Get all values of a specific key in an array. Sample JSON: {"markers":[{"name":"Alpha"},{"name":"Beta"}]}
+```
+cat markers.json | jq ".markers[] | .name"
+#outputs
+"Alpha"
+"Beta"
+```
 
 
 
